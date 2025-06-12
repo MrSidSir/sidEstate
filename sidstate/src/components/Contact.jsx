@@ -21,7 +21,7 @@ export default function Contact({ listing }) {
     const fetchLandlord = async () => {
       try {
         // 📡 API call to get landlord info by userRef
-        const res = await fetch(`http://localhost:3000/api/user/${listing.userRef}`);
+        const res = await fetch(`https://sidestate.onrender.com/api/user/${listing.userRef}`);
         const data = await res.json(); // 📦 parse response as JSON
         setLandlord(data); // ✅ save to state
       } catch (error) {

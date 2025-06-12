@@ -21,7 +21,7 @@ export default function SignIn() {
     e.preventDefault();
     dispatch(signInStart());
     try {
-      const res = await fetch('http://localhost:3000/api/auth/signin', {
+      const res = await fetch('https://sidestate.onrender.com/api/auth/signin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

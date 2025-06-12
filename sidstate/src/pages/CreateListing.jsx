@@ -115,7 +115,7 @@ export default function CreateListing() {
   setError(false);
 
   // ✅ Create listing API call
-  const res = await fetch('http://localhost:3000/api/listing/create', {
+  const res = await fetch('https://sidestate.onrender.com/api/listing/create', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

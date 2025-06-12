@@ -29,7 +29,7 @@ export default function Home() {
   useEffect(() => {
     const fetchOfferListings = async () => {
       try {
-        const res = await fetch('http://localhost:3000/api/listing/get?offer=true&limit=4');
+        const res = await fetch('https://sidestate.onrender.com/api/listing/get?offer=true&limit=4');
         const data = await res.json();
         setOfferListings(data);
         fetchRentListings(); // fetch rent listings after offers
@@ -41,7 +41,7 @@ export default function Home() {
 
     const fetchSaleListings = async () => {
       try {
-        const res = await fetch('http://localhost:3000/api/listing/get?type=sale&limit=4'); // 🐛 FIXED: 'listung' => 'listing'
+        const res = await fetch('https://sidestate.onrender.com/api/listing/get?type=sale&limit=4'); // 🐛 FIXED: 'listung' => 'listing'
         const data = await res.json();
         setSaleListings(data);
       } catch (error) {
@@ -51,7 +51,7 @@ export default function Home() {
 
     const fetchRentListings = async () => {
       try {
-        const res = await fetch('http://localhost:3000/api/listing/get?type=rent&limit=4');
+        const res = await fetch('https://sidestate.onrender.com/api/listing/get?type=rent&limit=4');
         const data = await res.json();
         setRentListings(data);
       } catch (error) {
