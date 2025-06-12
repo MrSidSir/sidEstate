@@ -35,7 +35,7 @@ export const signin = async (req, res, next) => {
       .cookie('access_token', token, {
         httpOnly: true,
         sameSite: 'Lax',
-         secure: false, // set true in production with HTTPS
+         secure: true, // set true in production with HTTPS
    
       })
       .json(rest); // ✅ return user without password
@@ -59,7 +59,7 @@ export const google = async (req, res, next) => {
   .cookie('access_token', token, {
     httpOnly: true,
     sameSite: 'Lax',
-    secure: false, // true if HTTPS
+    secure: true, // true if HTTPS
   })
   .json(rest);
     } else {
@@ -86,7 +86,7 @@ export const google = async (req, res, next) => {
   .cookie('access_token', token, {
     httpOnly: true,
     sameSite: 'Lax',
-    secure: false, // true if HTTPS
+    secure: true, // true if HTTPS
   })
   .json(rest);
     }
